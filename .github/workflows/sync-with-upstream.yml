@@ -1,0 +1,32 @@
+name: Sync Changes
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+      - uses: actions/checkout@v3
+
+      - name: Clone repo
+        run: |
+          git clone https://github.com/squirrel-sql-client/squirrel-sql-code
+          cd squirrel-sql-code
+
+      - name: Check for changes
+        run: |
+          cd squirrel-sql-code
+          git rev-parse HEAD > ../commit_hash.txt
+          cd ..
+          git add commit_hash.txt
+          git commit -m "Synced with latest"
