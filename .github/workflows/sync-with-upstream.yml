@@ -24,11 +24,17 @@ jobs:
           cd squirrel-sql-code
 
       - name: Check for changes
+        env:
+          GH_TOKEN: ${{ secrets.MY_PAT }}
         run: |
           cd squirrel-sql-code
-          git rev-parse HEAD > ../commit_hash.txt
-          cd ..
-          git add commit_hash.txt
+          git rev-parse HEAD > commit_hash.txt
+          if [ ! -f ../commit_hash.txt ] || [ ! cmp --silent -- file1.txt file2.txt ]; then
+            cp commit_hash.txt ../commit_hash.txt
+            cd ..
+            git add commit_hash.txt
 
-          git commit -m "Synced with latest" || true
-          git push https://${{ secrets.MY_PAT }}@github.com/${{ github.repository }} HEAD:master || true
+            git commit -m "Synced with latest" || true
+            git push
+            gh api repos/${{ github.repository }}/dispatches -F event_type='trigger-deploy'
+          fi

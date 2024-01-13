@@ -6,6 +6,8 @@ on:
   push:
     branches: ['*', '!gh-pages']
     tags: ['*']
+    repository_dispatch:
+      types: [trigger-deploy]
 
 jobs:
   build:
