@@ -6,7 +6,7 @@ on:
   push:
     branches: ['*', '!gh-pages']
     tags: ['*']
-    workflow_dispatch:
+  workflow_dispatch:
 jobs:
   build:
     permissions:
