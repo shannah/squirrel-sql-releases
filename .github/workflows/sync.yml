@@ -1,5 +1,3 @@
-# This workflow will build a Java project with Maven and bundle them as native app installers with jDeploy
-
 name: Sync Changes
 
 on:
