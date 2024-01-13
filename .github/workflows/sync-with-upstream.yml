@@ -36,5 +36,5 @@ jobs:
 
             git commit -m "Synced with latest" || true
             git push
-            gh api repos/${{ github.repository }}/dispatches -F event_type='trigger-deploy'
+            gh workflow run jdeploy.yml
           fi
