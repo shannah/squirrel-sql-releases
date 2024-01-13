@@ -46,7 +46,7 @@ jobs:
           cd squirrel-sql-code/sql12
           mkdir -p output/work/bin versionChecker/output/work/bin
           ant compileVersionCheck compileCore
-          mv output ../output
+          mv output ../../output
 
       - name: Build App Installer Bundles
         if: env.COMMIT_HASH_EXISTS == 'true'

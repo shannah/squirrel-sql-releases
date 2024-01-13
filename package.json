@@ -5,7 +5,7 @@
     "jdeploy": {
         "jdk": false,
         "javaVersion": "11",
-        "jar": "sql12/output/dist/squirrel-sql.jar",
+        "jar": "output/dist/squirrel-sql.jar",
         "title": "SQirreL SQL Client"
     },
     "dependencies": {
