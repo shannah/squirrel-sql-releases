@@ -1,11 +1,16 @@
 name: Sync Changes
+
 on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
   workflow_dispatch:
+
 jobs:
   build:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+
     steps:
       - name: Set up Git
         run: |
