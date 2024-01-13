@@ -32,9 +32,10 @@ jobs:
             echo "COMMIT_HASH_EXISTS=true" >> $GITHUB_ENV
           else
             echo "COMMIT_HASH_EXISTS=false" >> $GITHUB_ENV
+          fi
 
       - name: Clone repo
-        if: env.FILE_EXISTS == 'true'
+        if: env.COMMIT_HASH_EXISTS == 'true'
         run: |
           git clone https://github.com/squirrel-sql-client/squirrel-sql-code
           cd squirrel-sql-code
