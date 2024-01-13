@@ -41,7 +41,7 @@ jobs:
           cd squirrel-sql-code
 
       - name: Build with Ant
-        if: env.FILE_EXISTS == 'true'
+        if: env.COMMIT_HASH_EXISTS == 'true'
         run: |
           cd squirrel-sql-code/sql12
           mkdir -p output/work/bin versionChecker/output/work/bin
@@ -49,7 +49,7 @@ jobs:
           mv output ../output
 
       - name: Build App Installer Bundles
-        if: env.FILE_EXISTS == 'true'
+        if: env.COMMIT_HASH_EXISTS == 'true'
         uses: shannah/jdeploy@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
