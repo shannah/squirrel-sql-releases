@@ -30,3 +30,4 @@ jobs:
           cd ..
           git add commit_hash.txt
           git commit -m "Synced with latest"
+          git push
