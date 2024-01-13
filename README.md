@@ -2,7 +2,7 @@
 Releases for SQirreL SQL client built with jDeploy, generated nightly off of the [its official GitHub repository](https://github.com/squirrel-sql-client/squirrel-sql-code).
 
 > [!NOTE]
-> This repository was created by [Steve Hannah](https://sjhannah.com), and is not an official release of the SQuirrel SQL project.  The official homepage for SQuirreL SQL is [https://squirrel-sql.sourceforge.io/](here).
+> This repository was created by [Steve Hannah](https://sjhannah.com), and is not an official release of the SQuirrel SQL project.  The official homepage for SQuirreL SQL is [here](https://squirrel-sql.sourceforge.io/).
 
 ## Download Links
 
