@@ -22,7 +22,7 @@ See [download page](https://www.jdeploy.com/gh/shannah/squirrel-sql-releases/mas
 
 ## Auto Update
 
-Once installed, the app will automatically receive latest updates from the [GitHub repository](https://github.com/squirrel-sql-client/squirrel-sql-code).
+Once installed, the app will automatically receive latest updates from the [GitHub repository](https://github.com/squirrel-sql-client/squirrel-sql-code), every time it is launched.
 
 ## Other Links
 
