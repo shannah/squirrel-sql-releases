@@ -6,7 +6,7 @@
         "jdk": false,
         "javaVersion": "11",
         "jar": "output/dist/squirrel-sql.jar",
-        "title": "SQirreL SQL Client"
+        "title": "SQuirreL SQL Client"
     },
     "dependencies": {
         "command-exists-promise": "^2.0.2",
